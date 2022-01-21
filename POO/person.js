@@ -15,7 +15,7 @@ class Person {
   }
   printAll(person) {
     for (let value in person) {
-      console.log(value + "-" + person[value]);
+      console.log(value + " - " + person[value]);
     }
   }
   printHobbits() {
@@ -27,21 +27,3 @@ class Person {
 module.exports = {
   Person,
 };
-//7.-
-let Jose = new Person();
-let Maria = new Person();
-let Jesus = new Person();
-class Contacts {
-  constructor() {
-    this.array = [Jose, Maria, Jesus];
-  }
-  printPersons() {
-    for (let array of this.array) {
-      for (let value in array) {
-        console.log(value + " - " + array[value]);
-      }
-    }
-  }
-}
-let contact = new Contacts();
-contact.printPersons();
